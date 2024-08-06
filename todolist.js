@@ -40,6 +40,11 @@ function addTaskToArr(task) {
   addTaskToLocalStor(arr);
 }
 
+deleteAll.onclick = function () {
+  taskList.innerHTML = "";
+  arr=[];
+  window.localStorage.clear();
+};
 function addEleToPage(arr) {
   taskList.innerHTML = "";
   arr.forEach((task) => {
@@ -100,7 +105,3 @@ function removeTaskLocalStor(taskId) {
   addTaskToLocalStor(arr);
 }
 
-deleteAll.onclick = function () {
-  taskList.innerHTML = "";
-  window.localStorage.clear();
-};
